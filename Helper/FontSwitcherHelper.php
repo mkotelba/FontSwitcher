@@ -24,6 +24,7 @@ class FontSwitcherHelper extends Base
     public function getFontPreference()
     {
         $labels = array(
+            'verdana' => 'Verdana',
             'lato' => 'Lato',
             'open-sans' => 'Open Sans',
             'roboto-slab' => 'Roboto Slab',

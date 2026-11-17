@@ -44,6 +44,38 @@
             </div>
         </fieldset>
 
+        <!-- Verdana Font -->
+        <fieldset class="<?= ($fontPreference == 'verdana') ? 'font-wrapper-enabled' : 'font-wrapper'?>">
+            <legend>Verdana</legend>
+            <div class="icon-version">
+                <span class="woff-icon" aria-hidden="true"></span>
+                <span class="font-version" title="<?= t('Font Version Included') ?>">2.015</span>
+            </div>
+            <span class="font-typeface" title="<?= t('Font Typeface') ?>">sans-serif</span>
+            <div class="font-option-wrapper">
+                <?= $this->form->radio('font_switcher_font_name', t('Use this font'), 'verdana', $fontPreference == 'verdana') ?>
+            </div>
+            <div class="font-description-wrapper">
+                <ul class="font-description">
+                    <li class="font-description-name"><?= e('Font Names with Fallbacks %s', '<i>' . t('(in order)') . '</i>') ?></li>
+                    <li class="font-name-value">Verdana, Helvetica, Arial, sans-serif</li>
+                </ul>
+                <ul class="font-description-styles">
+                    <li class="font-description-styles-title"><?= t('Styles') ?></li>
+                    <li class="font-style-value"><?= t('Regular (400 normal)') ?></li>
+                    <li class="font-style-value"><?= t('Italic') ?></li>
+                    <li class="font-style-value"><?= t('Bold (700)') ?></li>
+                    <li class="font-style-value"><?= t('Bold Italic (700 italic)') ?></li>
+                </ul>
+                <ul class="font-description-charsets">
+                    <li class="font-description-charsets-title"><?= t('Character Sets') ?></li>
+                    <li class="font-charset-value" title="latin"><?= t('Latin') ?></li>
+                    <li class="font-charset-value" title="latin-ext"><?= t('Latin Extended') ?></li>
+                </ul>
+                <img src="<?= $this->url->dir() ?>plugins/FontSwitcher/Assets/previews/font-preview-lato.png" class="font-preview-img" width="465" height="90" alt="<?= t('Preview of the Verdana font') ?>">
+            </div>
+        </fieldset>
+        
         <!-- Lato Font -->
         <fieldset class="<?= ($fontPreference == 'lato') ? 'font-wrapper-enabled' : 'font-wrapper'?>">
             <legend>Lato</legend>

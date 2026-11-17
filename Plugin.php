@@ -14,7 +14,9 @@ class Plugin extends Base
         //  - Keep filename lowercase
         $this->hook->on('template:layout:css', array('template' => 'plugins/FontSwitcher/Assets/css/font-switcher.css'));
         $this->hook->on('template:layout:css', array('template' => 'plugins/FontSwitcher/Assets/css/font-switcher-icons.css'));
-        if ($this->configModel->get('font_switcher_font_name') == 'lato') {
+        if ($this->configModel->get('font_switcher_font_name') == 'verdana') {
+            $this->hook->on('template:layout:css', array('template' => 'plugins/FontSwitcher/Assets/fonts/verdana/verdana.css'));
+        } elseif ($this->configModel->get('font_switcher_font_name') == 'lato') {
             $this->hook->on('template:layout:css', array('template' => 'plugins/FontSwitcher/Assets/fonts/lato/lato.css'));
             $this->hook->on('template:layout:css', array('template' => 'plugins/FontSwitcher/Assets/fonts/lato/cyrillic.css'));
         } elseif ($this->configModel->get('font_switcher_font_name') == 'open-sans') {
@@ -81,7 +83,7 @@ class Plugin extends Base
 
     public function getPluginVersion()
     {
-        return '1.7.3';
+        return '1.7.4';
     }
 
     public function getCompatibleVersion()

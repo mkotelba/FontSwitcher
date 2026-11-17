@@ -19,6 +19,7 @@ class FontPreferenceModel extends Base
 
     private const ALLOWED_FONTS = array(
         self::DEFAULT_FONT,
+        'verdana',
         'lato',
         'open-sans',
         'roboto-slab',
