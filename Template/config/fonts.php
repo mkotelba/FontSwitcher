@@ -48,8 +48,8 @@
         <fieldset class="<?= ($fontPreference == 'verdana') ? 'font-wrapper-enabled' : 'font-wrapper'?>">
             <legend>Verdana</legend>
             <div class="icon-version">
-                <span class="woff-icon" aria-hidden="true"></span>
-                <span class="font-version" title="<?= t('Font Version Included') ?>">2.015</span>
+                <span class="default-files-icon" aria-hidden="true"></span>
+                <span class="font-version" title="<?= t('Font Version Included') ?>">1.0</span>
             </div>
             <span class="font-typeface" title="<?= t('Font Typeface') ?>">sans-serif</span>
             <div class="font-option-wrapper">
